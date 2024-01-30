@@ -1,0 +1,4 @@
+### GRPC
+#### Directories
+- `./frontend`
+- `./backend`

@@ -1,4 +1,14 @@
-# todo_server.py
+"""
+TO COMPILE PROTOCOL BUFFERS (PROTOBUF) FILE INTO PYTHON CODE FOR gRPC   
+
+python -m grpc_tools.protoc -I . --python_out=. --grpc_python_out=. todo.proto
+
+1. -m grpc_tools.protoc => Invokes Protocol Buffers compiler (protoc) using grpc_tools.protoc (Python module) 
+2. -I .                 => Specifies dir to search for imported .proto files. (.) indicates search current dir for imports 
+3. --python_out=.       => Specifies dir where generated python code should be placed. (.) sets it to curr dir 
+4. --grpc_python_out=.  => Specifies dir where generated gRPC python code should be placed. (.) sets to curr dir 
+5. todo.proto           => Specific Protocol Buffers file user wants to compile
+"""
 
 import grpc
 from concurrent import futures
