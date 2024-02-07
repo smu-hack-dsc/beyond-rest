@@ -15,16 +15,17 @@
 
 <body class="flex">
 
-    <div class="flex flex-col w-full lg:w-1/2 h-screen p-10 gap-4 m-auto">
+    <div class="flex flex-col w-full lg:w-2/3 h-screen p-10 gap-4 m-auto">
         <p class="text-4xl font-bold my-2">SMU .Hack 💬</p>
-        <div class="bg-white w-full h-full overflow-y-scroll">
+        <input class="input input-text w-full input-bordered" placeholder="Your Name" id="chat-name"></input>
+        <div class="w-full h-full overflow-y-scroll border-2 rounded-lg border-gray-700">
             <div id="chat-container">
                 <div id="last-pointer"></div>
             </div>
         </div>
         <div class="w-full m-auto flex flex-row gap-4">
             <input type="text" placeholder="Type here..." class="input input-bordered grow input-lg" id="chat-input" />
-            <button class="btn btn-square btn-primary btn-lg text-white" id="send-button">
+            <button class="btn btn-square btn-primary btn-lg text-white" id="send-button" onclick="sendMessage()">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round"

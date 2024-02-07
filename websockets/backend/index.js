@@ -23,8 +23,8 @@ io.on("connection", (socket) => {
   });
 
   // Handle chat message
-  socket.on("chatMessage", (roomId, message) => {
-    io.to(roomId).emit("chatMessage", message);
+  socket.on("chatMessage", (message) => {
+    io.emit("receiveMessage", message);
   });
 
   socket.on("disconnect", () => {
