@@ -1,4 +1,1 @@
 ### GRPC
-#### Directories
-- `./demo`
-- `./lab`
