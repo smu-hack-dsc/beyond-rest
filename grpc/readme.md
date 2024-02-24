@@ -1,4 +1,4 @@
 ### GRPC
 #### Directories
-- `./frontend`
-- `./backend`
+- `./demo`
+- `./lab`
