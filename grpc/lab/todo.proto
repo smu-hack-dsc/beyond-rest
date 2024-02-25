@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package todo;
+
+service TodoService {
+  // Implement Unary RPCs -> client send single request and server returns single response
+  rpc AddTask(TaskRequest) returns (TaskResponse);
+  rpc GetTasks(Empty) returns (TasksList);
+  rpc RemoveAllTasks(Empty) returns (TaskResponse);
+
+  // Server streaming RPCs -> client send single request and server returns stream of responses
+  // gRPC guarantees the ordering of messages within an individual RPC call
+  rpc GetTaskHistory(Empty) returns (stream TaskResponse);
+  // Client streaming RPCs -> client send sequence of messages and server reads all messages before sending back single response
+  rpc AddMultipleTasks(stream TaskRequest) returns (TaskResponse);      
+}
+
+message TaskRequest {
+  string task = 1;
+}
+
+message TaskResponse {
+  string message = 1;
+}
+
+message TasksList {
+  repeated string tasks = 1;
+}
+
+message Empty {}
